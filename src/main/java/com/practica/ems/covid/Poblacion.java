@@ -35,7 +35,6 @@ public class Poblacion {
 	}
 
 
-
     public int findPersona(String documento) throws EmsPersonNotFoundException {
         int cont = 0;
         Iterator<Persona> it = lista.iterator();
