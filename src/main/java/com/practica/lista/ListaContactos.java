@@ -15,7 +15,6 @@ public class ListaContactos {
 	 */
 	public void insertarNodoTemporal(PosicionPersona p) {
 		NodoTemporal aux = lista;
-		NodoTemporal ant = null;
 		NodoTemporal existente = buscarNodoTemporalPorFecha(p.getFechaPosicion(), aux);
 		if (existente != null) {
 			insertarOIncrementarPosicion(existente, p.getCoordenada());
