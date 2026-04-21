@@ -127,23 +127,11 @@ public class ContactosCovid {
     }
 
     public int findPersona(String documento) throws EmsPersonNotFoundException {
-        int pos;
-        try {
-            pos = this.poblacion.findPersona(documento);
-            return pos;
-        } catch (EmsPersonNotFoundException e) {
-            throw new EmsPersonNotFoundException();
-        }
+        return this.poblacion.findPersona(documento);
     }
 
     public int findLocalizacion(String documento, String fecha, String hora) throws EmsLocalizationNotFoundException {
-        int pos;
-        try {
-            pos = localizacion.findLocalizacion(documento, fecha, hora);
-            return pos;
-        } catch (EmsLocalizationNotFoundException e) {
-            throw new EmsLocalizationNotFoundException();
-        }
+        return localizacion.findLocalizacion(documento, fecha, hora);
     }
 
     public List<PosicionPersona> localizacionPersona(String documento) throws EmsPersonNotFoundException {

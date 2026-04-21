@@ -31,7 +31,7 @@ public class Poblacion {
 			throw new EmsDuplicatePersonException();
 		} catch (EmsPersonNotFoundException e) {
 			lista.add(persona);
-		} 
+		}
 	}
 	
 	public void delPersona(String documento) throws EmsPersonNotFoundException {
@@ -41,12 +41,7 @@ public class Poblacion {
 		 * devuelve la posición dentro de la lista, sino está lanza
 		 * una excepción
 		 */
-		try {
-			pos = findPersona(documento);
-		} catch (EmsPersonNotFoundException e) {
-			throw new EmsPersonNotFoundException();
-		}
-		lista.remove(pos);		
+        pos = findPersona(documento);
 	}
 	
 	public int findPersona (String documento) throws EmsPersonNotFoundException {
