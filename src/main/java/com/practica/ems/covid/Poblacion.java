@@ -33,29 +33,25 @@ public class Poblacion {
 			lista.add(persona);
 		}
 	}
-	
-	public void delPersona(String documento) throws EmsPersonNotFoundException {
-		int pos=-1;
-		/**
-		 * Busca la persona por documento, en caso de encontrarla
-		 * devuelve la posición dentro de la lista, sino está lanza
-		 * una excepción
-		 */
-        pos = findPersona(documento);
-	}
-	
-	public int findPersona (String documento) throws EmsPersonNotFoundException {
-		int cont=0;
-		Iterator<Persona> it = lista.iterator();
-		while (it.hasNext() ) {
-			Persona persona = it.next();
-			cont++;
-			if(persona.getDocumento().equals(documento)) {
-				return cont;
-			}
-		}		
-		throw new EmsPersonNotFoundException();
-	}
+
+
+
+    public int findPersona(String documento) throws EmsPersonNotFoundException {
+        int cont = 0;
+        Iterator<Persona> it = lista.iterator();
+
+        while (it.hasNext()) {
+            Persona persona = it.next();
+
+            if (persona.getDocumento().equals(documento)) {
+                return cont;
+            }
+
+            cont++;
+        }
+
+        throw new EmsPersonNotFoundException();
+    }
 	
 	public void printPoblacion() {   
 		 
